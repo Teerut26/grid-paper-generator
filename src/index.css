@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Noto Sans Thai", serif;
+  font-optical-sizing: auto;
+}
+
+@media print {
+  @page {
+    size: A4 landscape !important;
+    margin: 5mm 5mm 5mm 5mm;
+  }
+}
