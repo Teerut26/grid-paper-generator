@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import clsx from "clsx"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function App() {
     const [horizontalLines, setHorizontalLines] = useState<number>(1)
@@ -8,6 +8,12 @@ export default function App() {
     const onPrint = () => {
         window.print()
     }
+
+    useEffect(() => {
+      document.title = `Grid: ${horizontalLines}x${verticalLines}`
+    }, [horizontalLines, verticalLines])
+    
+
     return (
         <>
             <div className="print:hidden mb-3 flex p-3">
