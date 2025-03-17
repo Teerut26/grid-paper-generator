@@ -107,7 +107,15 @@ export default function App() {
                         ))}
                     </div>
                     {/* Dotted grid */}
-                    {showDotted && <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-evenly dotted"></div>}
+                    {showDotted && <div className="flex gap-[4px] flex-col z-50 overflow-hidden ml-1 mt-1 min-w-fit">
+                        {[...Array(200)].map((_, i) => (
+                            <div className="flex gap-[4px] overflow-hidden min-w-fit" key={i}>
+                                {[...Array(280)].map((_, j) => (
+                                    <div className="min-w-[1px] min-h-[1px] bg-gray-100 print:bg-gray-200 rounded-full" key={j}></div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>}
                 </>
                 }
             </div>
