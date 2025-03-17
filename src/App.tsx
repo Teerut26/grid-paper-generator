@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import clsx from "clsx"
 import { useEffect, useState } from "react"
-import Dotted from "./assets/dotted.svg"
-import Dotted2 from "./assets/dot-seamless-pattern.svg"
 
 export default function App() {
     const [horizontalLines, setHorizontalLines] = useState<number>(1)
